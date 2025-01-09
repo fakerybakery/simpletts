@@ -1,11 +1,19 @@
 # SimpleTTS
 
-Run and use TTS models with just a few lines of code. Quickly switch between models.
+A lightweight Python library for text-to-speech synthesis that makes it easy to use and switch between different TTS models.
 
 > [!NOTE]
-> This is a work in progress. It's not ready for production use.
+> This project is under active development and APIs may change. Not recommended for production use yet.
 
-## Usage
+## Features
+
+- 🚀 Simple, intuitive API
+- 🔄 Easy model switching
+- 🎯 Focus on ease of use
+- 📦 Minimal dependencies
+- 🔌 Extensible architecture
+
+## Quick Start
 
 ```python
 from simpletts.models.xtts import XTTS
@@ -19,32 +27,39 @@ array, sr = tts.synthesize("Hello, world!", ref="sample.wav")
 sf.write("output.wav", array, sr)
 ```
 
-## Models
+## Supported Models
 
-| Model | License |
-|-------|---------|
-| XTTS | CPML |
-| Kokoro | Apache-2.0 |
+| Model | License | Description |
+|-------|---------|-------------|
+| XTTS | CPML | High-quality multilingual TTS with voice cloning capabilities |
+| Kokoro | Apache-2.0 | Fast and lightweight English TTS with voice cloning |
 
-## Progress
+## Roadmap
 
 **Models**
 
-- [x] XTTS
-- [ ] StyleTTS 2
-- [x] Kokoro (only supports English for now)
-- [ ] F5-TTS
+- [x] XTTS - Production-ready multilingual TTS
+- [x] Kokoro - StyleTTS 2-based English TTS without voice cloning
+- [ ] StyleTTS 2 - Fast and efficient zero-shot voice cloning
+- [ ] F5-TTS - Superb voice cloning and naturalness, but slower and less stable
 
 **Features**
 
-- [x] Python API
-- [ ] CLI
-- [ ] API + Web UI
+- [x] Simple Python API for easy integration
+- [ ] Command-line interface for quick testing and batch processing
+- [ ] REST API and web interface for remote access
+- [ ] Model benchmarking tools
+- [ ] Batch processing support
+- [ ] Audio post-processing options
 
 ## License
 
 This project is licensed under the BSD-3-Clause license. See the [LICENSE](LICENSE) file for more details.
 
-While you may use this project for commercial purposes, some models supported by this project may require additional licensing or restrict commercial use.
+While SimpleTTS itself is open source and can be used commercially, please note that some supported models have different licensing terms:
 
-Note that this project contains or references code from other projects, which are subject to their own licenses. See the `licenses` directory for more details.
+- XTTS is licensed under CPML which restricts commercial use
+- Kokoro is licensed under Apache-2.0 which allows commercial use
+- Other models may have their own licensing requirements
+
+For complete licensing information for all included models and dependencies, please see the `licenses` directory.
