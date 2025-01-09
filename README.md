@@ -55,8 +55,8 @@ sf.write("output.wav", array, sr)
 
 - [x] XTTS - Production-ready multilingual TTS
 - [x] Kokoro - StyleTTS 2-based English TTS without voice cloning
+- [x] F5-TTS - Superb voice cloning and naturalness, but slower and less stable
 - [ ] StyleTTS 2 - Fast and efficient zero-shot voice cloning
-- [ ] F5-TTS - Superb voice cloning and naturalness, but slower and less stable
 
 **Features**
 
