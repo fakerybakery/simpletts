@@ -1,4 +1,4 @@
-[Docs](https://fakerybakery.github.io/simpletts/)
+[GitHub](https://github.com/fakerybakery/simpletts) | [Docs](https://fakerybakery.github.io/simpletts/) | [PyPI](https://pypi.org/project/simpletts/)
 
 # SimpleTTS
 
