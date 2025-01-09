@@ -48,6 +48,14 @@ sf.write("output.wav", array, sr)
 | XTTS | CPML | High-quality multilingual TTS with voice cloning capabilities |
 | Kokoro | Apache-2.0 | Fast and lightweight English TTS with voice cloning |
 | F5-TTS | CC BY-NC | Superb voice cloning and naturalness, but slower and less stable |
+| Parler TTS | Apache-2.0 | Describe a voice with a text prompt |
+
+> [!NOTE]
+> If you are trying to install Parler TTS, you may run into dependency conflicts or other issues. Parler TTS is not officially supported by the SimpleTTS project, please do not report issues to the SimpleTTS project if you run into issues.
+> 
+> Parler TTS is not officially available on PyPI, so we cannot add it as a required dependency due to PyPI security requirements. We have published several unofficial packages for Parler TTS and its dependencies to PyPI, however this is not guaranteed to work.
+>
+> If you run into issues, please try running `pip uninstall parler-tts` and then `pip install git+https://github.com/huggingface/parler-tts`.
 
 ## Roadmap
 
@@ -56,9 +64,9 @@ sf.write("output.wav", array, sr)
 - [x] XTTS - Production-ready multilingual TTS
 - [x] Kokoro - StyleTTS 2-based English TTS without voice cloning
 - [x] F5-TTS - Superb voice cloning and naturalness, but slower and less stable
+- [x] Parler TTS - Describe a voice with a text prompt
 - [ ] StyleTTS 2 - Fast and efficient zero-shot voice cloning
 - [ ] CosyVoice2 - Zero-shot voice cloning
-- [ ] Parler TTS - Describe a voice with a text prompt
 - [ ] MetaVoice - 1.1B parameter zero-shot voice cloning model
 - [ ] Fish Speech 1.5 - Zero-shot voice cloning
 - [ ] OpenVoice V2 - Open source zero-shot voice cloning by MyShell

@@ -39,6 +39,9 @@ setup(
         "f5": [
             "f5-tts",
         ],
+        "parler": [
+            "parler-tts",
+        ],
     },
     classifiers=[
         "License :: OSI Approved :: BSD License",
