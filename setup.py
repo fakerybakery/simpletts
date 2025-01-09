@@ -36,6 +36,9 @@ setup(
         "xtts": [
             "tts",
         ],
+        "f5": [
+            "f5-tts",
+        ],
     },
     classifiers=[
         "License :: OSI Approved :: BSD License",

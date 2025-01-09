@@ -172,3 +172,7 @@ cython_debug/
 
 # macOS
 .DS_Store
+
+# SimpleTTS
+.wav
+internal/

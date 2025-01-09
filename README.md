@@ -47,6 +47,7 @@ sf.write("output.wav", array, sr)
 |-------|---------|-------------|
 | XTTS | CPML | High-quality multilingual TTS with voice cloning capabilities |
 | Kokoro | Apache-2.0 | Fast and lightweight English TTS with voice cloning |
+| F5-TTS | CC BY-NC | Superb voice cloning and naturalness, but slower and less stable |
 
 ## Roadmap
 
@@ -65,6 +66,11 @@ sf.write("output.wav", array, sr)
 - [ ] Model benchmarking tools
 - [ ] Batch processing support
 - [ ] Audio post-processing options
+- [ ] Allow easier extensibility with a plugin system
+
+## Support & Feedback
+
+If you encounter any issues or have questions, please open an [issue](https://github.com/fakerybakery/simpletts/issues).
 
 ## License
 
