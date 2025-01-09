@@ -7,11 +7,11 @@ A lightweight Python library for text-to-speech synthesis that makes it easy to 
 
 ## Features
 
-- 🚀 Simple, intuitive API
-- 🔄 Easy model switching
-- 🎯 Focus on ease of use
-- 📦 Minimal dependencies
-- 🔌 Extensible architecture
+- 🚀 Simple and intuitive API - get started in minutes
+- 🔄 No model lock-in - switch models with just a few lines of code
+- 🎯 Focus on ease of use - a single API for all models
+- 📦 Minimal dependencies - one package for all models
+- 🔌 Extensible architecture - easily add new models
 
 ## Installation
 
@@ -74,7 +74,7 @@ If you encounter any issues or have questions, please open an [issue](https://gi
 
 ## License
 
-This project is licensed under the BSD-3-Clause license. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the **BSD-3-Clause** license. See the [LICENSE](LICENSE) file for more details.
 
 While SimpleTTS itself is open source and can be used commercially, please note that some supported models have different licensing terms:
 
