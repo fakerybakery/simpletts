@@ -23,7 +23,7 @@ sf.write("output.wav", array, sr)
 
 **Models**
 
-- [ ] XTTS
+- [x] XTTS
 - [ ] StyleTTS 2 + Kokoro
 - [ ] F5-TTS
 
