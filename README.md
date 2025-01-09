@@ -1,6 +1,6 @@
 # SimpleTTS
 
-A lightweight Python library for text-to-speech synthesis that makes it easy to use and switch between different TTS models.
+A lightweight Python library for running TTS models with a unified API.
 
 > [!NOTE]
 > This project is under active development and APIs may change. Not recommended for production use yet.

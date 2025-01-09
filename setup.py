@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="simpletts",
-    description="Easily run and use TTS models with just a few lines of code.",
+    description="A lightweight Python library for running TTS models with a unified API.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/fakerybakery/simpletts",
