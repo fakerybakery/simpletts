@@ -6,6 +6,11 @@ setup(
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/fakerybakery/simpletts",
+    project_urls={
+        "Bug Tracker": "https://github.com/fakerybakery/simpletts/issues",
+        "Documentation": "https://github.com/fakerybakery/simpletts/wiki",
+        "Source Code": "https://github.com/fakerybakery/simpletts",
+    },
     author="mrfakename",
     author_email="me@mrfake.name",
     license="BSD-3-Clause",
