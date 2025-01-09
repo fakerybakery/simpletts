@@ -13,6 +13,20 @@ A lightweight Python library for text-to-speech synthesis that makes it easy to 
 - 📦 Minimal dependencies
 - 🔌 Extensible architecture
 
+## Installation
+
+Install the latest release from PyPI:
+
+```bash
+pip install simpletts
+```
+
+Or get the latest version from source:
+
+```bash
+pip install git+https://github.com/fakerybakery/simpletts
+```
+
 ## Quick Start
 
 ```python
