@@ -19,17 +19,25 @@ array, sr = tts.synthesize("Hello, world!", ref="sample.wav")
 sf.write("output.wav", array, sr)
 ```
 
+## Models
+
+| Model | License |
+|-------|---------|
+| XTTS | CPML |
+| Kokoro | Apache-2.0 |
+
 ## Progress
 
 **Models**
 
 - [x] XTTS
-- [ ] StyleTTS 2 + Kokoro
+- [ ] StyleTTS 2
+- [x] Kokoro (only supports English for now)
 - [ ] F5-TTS
 
 **Features**
 
-- [ ] Python API
+- [x] Python API
 - [ ] CLI
 - [ ] API + Web UI
 

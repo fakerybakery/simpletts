@@ -15,6 +15,7 @@ setup(
         "torch",
         "accelerate",
         "torchaudio",
+        "cached-path",
         "transformers[torch]",
         "datasets",
         "pydub",
@@ -23,6 +24,7 @@ setup(
         "librosa",
         "soundfile",
         "tqdm",
+        "openphonemizer",
         "click",
     ],
     extras_require={
