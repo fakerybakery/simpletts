@@ -95,4 +95,6 @@ While SimpleTTS itself is open source and can be used commercially, please note 
 - Kokoro is licensed under Apache-2.0 which allows commercial use
 - Other models may have their own licensing requirements
 
+Note that SimpleTTS **does not** use the GPL-licensed `phonemizer` library. Instead, it uses the BSD-licensed `openphonemizer` alternative. While this may slightly reduce pronunciation accuracy, it's license is compatible with the BSD-3-Clause license of SimpleTTS.
+
 For complete licensing information for all included models and dependencies, please see the `licenses` directory.
