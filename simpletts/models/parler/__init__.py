@@ -15,7 +15,7 @@ class Parler(TTSModel):
         super().__init__()
         if device == "auto":
             device = "cuda" if torch.cuda.is_available() else "cpu"
-        
+
         self.device = device
         self.model = ParlerTTSForConditionalGeneration.from_pretrained(
             "parler-tts/parler-tts-mini-v1"
@@ -37,13 +37,13 @@ class Parler(TTSModel):
                 - Sample rate as integer
         """
         input_ids = self.tokenizer(ref, return_tensors="pt").input_ids.to(self.device)
-        prompt_input_ids = self.tokenizer(text, return_tensors="pt").input_ids.to(self.device)
+        prompt_input_ids = self.tokenizer(text, return_tensors="pt").input_ids.to(
+            self.device
+        )
 
         generation = self.model.generate(
-            input_ids=input_ids, 
-            prompt_input_ids=prompt_input_ids,
-            **kwargs
+            input_ids=input_ids, prompt_input_ids=prompt_input_ids, **kwargs
         )
         audio = generation.cpu().numpy().squeeze()
-        
+
         return audio, self.model.config.sampling_rate
