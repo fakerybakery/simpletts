@@ -46,6 +46,10 @@ array, sr = tts.synthesize("Hello, world!", ref="sample.wav")
 sf.write("output.wav", array, sr)
 ```
 
+## SimpleTTS vs SpeechToolkit
+
+I am also working on another project, [SpeechToolkit](https://github.com/ml-for-speech/speechtoolkit). SpeechToolkit is designed to be a more comprehensive library with more models and features (such as voice conversion and ASR). On the other hand, SimpleTTS is designed to be a lightweight library with a simple API and minimal customization.
+
 ## Support & Feedback
 
 If you encounter any issues or have questions, please open an [issue](https://github.com/fakerybakery/simpletts/issues).
