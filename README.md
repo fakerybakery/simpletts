@@ -52,7 +52,7 @@ If you encounter any issues or have questions, please open an [issue](https://gi
 
 ## License
 
-This project is licensed under the **BSD-3-Clause** license. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the **BSD-3-Clause** license, which means it can be used commercially. See the [LICENSE](LICENSE) file for more details.
 
 While SimpleTTS itself is open source and can be used commercially, please note that some supported models have different licensing terms:
 
