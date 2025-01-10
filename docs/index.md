@@ -28,7 +28,11 @@ Or get the latest version from source:
 pip install git+https://github.com/fakerybakery/simpletts
 ```
 
-## Quick Start
+## Quick Start (Simple API)
+
+The [Simple API](simple.md) provides the easiest way to get started with SimpleTTS. With just a few lines of code, you can generate natural-sounding speech. The Simple API **should not be used in environments that require customization or voice cloning** - it's designed for quick and easy use cases.
+
+## Python API
 
 ```python
 from simpletts.models.xtts import XTTS

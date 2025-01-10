@@ -41,6 +41,8 @@ from simpletts import tts
 tts("Hello, world!").save("output.wav")
 ```
 
+View the [Simple API docs](https://fakerybakery.github.io/simpletts/simple/) for more information.
+
 ## Python API
 
 **Get started with the XTTS model:**
