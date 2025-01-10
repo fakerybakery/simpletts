@@ -31,7 +31,19 @@ Install the latest release from PyPI:
 pip install simpletts
 ```
 
-## Quick Start
+## Quick Start (Simple API)
+
+If you don't plan on choosing a custom model or using voice cloning, you can use the simple API. Currently, the simple API uses the Kokoro model.
+
+```python
+from simpletts import tts
+
+tts("Hello, world!").save("output.wav")
+```
+
+## Python API
+
+**Get started with the XTTS model:**
 
 ```python
 import soundfile as sf
