@@ -13,3 +13,7 @@ markdown_extensions:
       custom_checkbox: true
 extra:
   generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fakerybakery/simpletts
+copyright: Copyright &copy; 2024 mrfakename. Licensed under the BSD 3-Clause License.
