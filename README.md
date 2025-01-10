@@ -9,7 +9,7 @@ A lightweight Python library for running TTS models with a unified API.
 
 ## Features
 
-- 🚀 Simple and intuitive API - get started in minutes
+- 🚀 Simple and intuitive API - get started with two lines of code using the simple API
 - 🔄 No model lock-in - switch models with just a few lines of code
 - 🎯 Focus on ease of use - a single API for all models
 - 📦 Minimal dependencies - one package for all models
