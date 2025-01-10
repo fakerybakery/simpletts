@@ -14,6 +14,7 @@ A lightweight Python library for running TTS models with a unified API.
 - 🎯 Focus on ease of use - a single API for all models
 - 📦 Minimal dependencies - one package for all models
 - 🔌 Extensible architecture - easily add new models
+- 💎 Feature-rich - includes longform narration, voice cloning support, and more
 
 ## Models
 
@@ -33,11 +34,13 @@ pip install simpletts
 ## Quick Start
 
 ```python
-from simpletts.models.xtts import XTTS
 import soundfile as sf
+from simpletts.models.xtts import XTTS
 
 tts = XTTS(device="auto")
-# Note: XTTS is licensed under the CPML license which restricts commercial use.
+# Easily swap out for F5-TTS:
+# from simpletts.models.f5 import F5TTS
+# tts = F5TTS(device="auto")
 
 array, sr = tts.synthesize("Hello, world!", ref="sample.wav")
 

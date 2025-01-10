@@ -31,6 +31,7 @@ setup(
         "tqdm",
         "openphonemizer",
         "click",
+        "txtsplit",
     ],
     extras_require={
         "xtts": [
