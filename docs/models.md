@@ -2,12 +2,12 @@
 
 ## Supported Models
 
-| Model | License | Description |
-|-------|---------|-------------|
-| XTTS | CPML | High-quality multilingual TTS with voice cloning capabilities |
-| Kokoro | Apache-2.0 | Fast and lightweight English TTS with voice cloning |
-| F5-TTS | CC BY-NC | Superb voice cloning and naturalness, but slower and less stable |
-| Parler TTS | Apache-2.0 | Describe a voice with a text prompt |
+| Model | License | Description | Link |
+|-------|---------|-------------|------|
+| XTTS | CPML | High-quality multilingual TTS with voice cloning capabilities | [XTTS](https://github.com/coqui-ai/TTS/blob/dev/docs/source/models/xtts.md) |
+| Kokoro | Apache-2.0 | Fast and lightweight English TTS with voice cloning | [Kokoro](https://huggingface.co/hexgrad/Kokoro-82M) |
+| F5-TTS | CC BY-NC | Superb voice cloning and naturalness, but slower and less stable | [F5-TTS](https://github.com/SWivid/F5-TTS) |
+| Parler TTS | Apache-2.0 | Describe a voice with a text prompt | [Parler TTS](https://github.com/huggingface/parler-tts) |
 
 ## XTTS
 
