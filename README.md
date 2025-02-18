@@ -19,7 +19,7 @@ A lightweight Python library for running TTS models with a unified API.
 ## Models
 
 - XTTS
-- Kokoro
+- Kokoro (v1.0)
 - F5-TTS
 - [& more](https://fakerybakery.github.io/simpletts/models/)
 
