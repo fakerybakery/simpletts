@@ -4,7 +4,7 @@ from simpletts.models.kokoro import Kokoro
 model = Kokoro(device="auto")
 
 def simpletts(text: str, **kwargs):
-    audio, sr = model.longform(text, ref="af", **kwargs)
+    audio, sr = model.longform(text, ref="af_heart", **kwargs)
     
     class AudioData:
         def __init__(self, audio, sr):

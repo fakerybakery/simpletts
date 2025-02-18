@@ -17,7 +17,7 @@ tts = Kokoro(device="auto")
 text = """
 Enter your longform text here...
 """
-audio, sr = tts.longform(text, ref="af")
+audio, sr = tts.longform(text, ref="af_heart")
 
 # Save output audio
 sf.write("output.wav", audio, sr)

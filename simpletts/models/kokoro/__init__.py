@@ -15,7 +15,7 @@ class Kokoro(TTSModel):
 
         self.model = KPipeline(lang_code='a', device=self.device)
 
-    def synthesize(self, text: str, ref: str, verbose: bool = True, **kwargs) -> tuple[np.ndarray, int]:
+    def synthesize(self, text: str, ref: str = "af_heart", verbose: bool = True, **kwargs) -> tuple[np.ndarray, int]:
         """
         Synthesize speech from text using Kokoro TTS.
 

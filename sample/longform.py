@@ -18,7 +18,7 @@ For organizations, having a unified TTS library means reduced training time for 
 
 In conclusion, as TTS technology becomes increasingly important in modern applications, having a unified library isn't just convenient - it's becoming essential for efficient development and maintenance of TTS-enabled applications.
 """
-audio, sr = tts.longform(text, ref="af")
+audio, sr = tts.longform(text, ref="af_heart")
 
 # Save output audio
 sf.write("output.wav", audio, sr)
