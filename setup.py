@@ -32,6 +32,7 @@ setup(
         "openphonemizer",
         "click",
         "txtsplit",
+        "munch",
     ],
     extras_require={
         "xtts": [
