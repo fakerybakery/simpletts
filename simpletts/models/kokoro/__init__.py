@@ -28,18 +28,9 @@ class Kokoro(TTSModel):
         Returns:
             Tuple of (audio_array, sample_rate)
         """
-        if ref in self.VOICE_NAMES:
-            voice = torch.load(
-                str(cached_path(f"hf://hexgrad/Kokoro-82M/voices/{ref}.pt")),
-                weights_only=True
-            ).to(self.device)
-        else:
-            # Assume ref is path to voice tensor
-            voice = torch.load(ref, weights_only=True).to(self.device)
-
         generator = self.model(
             text,
-            voice=voice,
+            voice=ref,
             speed=kwargs.get('speed', 1),
             split_pattern=kwargs.get('split_pattern', r'\n+')
         )
