@@ -402,7 +402,6 @@ def recursive_munch(d):
 
 def build_model(path, device):
     config = str(cached_path('hf://hexgrad/Kokoro-82M/config.json'))
-    assert config.exists(), f"Config path incorrect: config.json not found at {config}"
     with open(config, "r") as r:
         args = recursive_munch(json.load(r))
     assert args.decoder.type == "istftnet", f"Unknown decoder type: {args.decoder.type}"
