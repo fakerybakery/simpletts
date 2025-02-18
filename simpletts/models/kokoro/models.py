@@ -11,7 +11,7 @@ import os.path as osp
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
+from cached_path import cached_path
 
 class LinearNorm(torch.nn.Module):
     def __init__(self, in_dim, out_dim, bias=True, w_init_gain="linear"):
@@ -401,7 +401,7 @@ def recursive_munch(d):
 
 
 def build_model(path, device):
-    config = Path(__file__).parent / "config.json"
+    config = str(cached_path('hf://hexgrad/Kokoro-82M/config.json'))
     assert config.exists(), f"Config path incorrect: config.json not found at {config}"
     with open(config, "r") as r:
         args = recursive_munch(json.load(r))
