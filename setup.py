@@ -14,7 +14,7 @@ setup(
     author="mrfakename",
     author_email="me@mrfake.name",
     license="BSD-3-Clause",
-    version="0.0.2",
+    version="0.0.3",
     packages=find_packages(),
     install_requires=[
         "torch",
