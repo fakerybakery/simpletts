@@ -33,6 +33,7 @@ setup(
         "click",
         "txtsplit",
         "munch",
+        "kokoro",
     ],
     extras_require={
         "xtts": [

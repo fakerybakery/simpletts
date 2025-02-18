@@ -1,28 +1,11 @@
 from simpletts.models import TTSModel
-from simpletts.models.kokoro.kokoro import generate
-from simpletts.models.kokoro.models import build_model
 import torch
 import numpy as np
-from pathlib import Path
-from munch import Munch
 from cached_path import cached_path
-
+from kokoro import KPipeline
+from tqdm import tqdm
 
 class Kokoro(TTSModel):
-    VOICE_NAMES = [
-        "af",
-        "af_bella",
-        "af_sarah",
-        "am_adam",
-        "am_michael",
-        "bf_emma",
-        "bf_isabella",
-        "bm_george",
-        "bm_lewis",
-        "af_nicole",
-        "af_sky",
-    ]
-
     def __init__(self, device="auto", **kwargs):
         super().__init__(device=device, **kwargs)
         if device == "auto":
@@ -30,28 +13,42 @@ class Kokoro(TTSModel):
         else:
             self.device = device
 
-        self.model = build_model(
-            str(cached_path("hf://hexgrad/Kokoro-82M/kokoro-v1_0.pth")), self.device
-        )
+        self.model = KPipeline(lang_code='a', device=self.device)
 
-    def synthesize(self, text: str, ref: str, **kwargs) -> tuple[np.ndarray, int]:
+    def synthesize(self, text: str, ref: str, verbose: bool = True, **kwargs) -> tuple[np.ndarray, int]:
         """
         Synthesize speech from text using Kokoro TTS.
 
         Args:
             text: Text to synthesize
-            **kwargs: Additional arguments passed to generate()
+            ref: Voice name or path to voice tensor
+            verbose: Whether to show progress bar
+            **kwargs: Additional arguments passed to pipeline generator
 
         Returns:
             Tuple of (audio_array, sample_rate)
         """
-        if not ref in self.VOICE_NAMES:
-            raise ValueError(
-                f"Invalid voice name: {ref}. Must be one of {self.VOICE_NAMES}. This model does not support custom voices or voice cloning."
-            )
-        ref = torch.load(
-            str(cached_path(f"hf://hexgrad/Kokoro-82M/voices/{ref}.pt")),
-            weights_only=True,
-        ).to(self.device)
-        audio, _ = generate(self.model, text, ref, lang="a", **kwargs)
+        if ref in self.VOICE_NAMES:
+            voice = torch.load(
+                str(cached_path(f"hf://hexgrad/Kokoro-82M/voices/{ref}.pt")),
+                weights_only=True
+            ).to(self.device)
+        else:
+            # Assume ref is path to voice tensor
+            voice = torch.load(ref, weights_only=True).to(self.device)
+
+        generator = self.model(
+            text,
+            voice=voice,
+            speed=kwargs.get('speed', 1),
+            split_pattern=kwargs.get('split_pattern', r'\n+')
+        )
+
+        # Concatenate all audio segments
+        audio_segments = []
+        iterator = tqdm(generator, desc="Generating audio") if verbose else generator
+        for _, _, audio in iterator:
+            audio_segments.append(audio)
+        
+        audio = np.concatenate(audio_segments)
         return audio, 24000  # Kokoro uses 24kHz sample rate
