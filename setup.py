@@ -15,9 +15,7 @@ setup(
     author_email="me@mrfake.name",
     license="BSD-3-Clause",
     version="0.0.2",
-    packages=[
-        'simpletts',
-    ],
+    packages=find_packages(),
     install_requires=[
         "torch",
         "accelerate",
