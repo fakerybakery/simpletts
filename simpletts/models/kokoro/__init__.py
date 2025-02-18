@@ -31,7 +31,7 @@ class Kokoro(TTSModel):
             self.device = device
 
         self.model = build_model(
-            str(cached_path("hf://hexgrad/Kokoro-82M/kokoro-v0_19.pth")), self.device
+            str(cached_path("hf://hexgrad/Kokoro-82M/kokoro-v1_0.pth")), self.device
         )
 
     def synthesize(self, text: str, ref: str, **kwargs) -> tuple[np.ndarray, int]:
